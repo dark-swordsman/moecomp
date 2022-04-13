@@ -1,11 +1,11 @@
 import Link from "next/link";
 
 export default function Layout({ children }) {
-  function NavLink({ href, children: name }) {
+  function NavLink({ href, children: navLinkBody }) {
     return (
       <Link href={href}>
         <a className="bg-secondary-900 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-secondary-700">
-          {name}
+          {navLinkBody}
         </a>
       </Link>
     );
