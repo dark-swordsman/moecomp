@@ -1,3 +1,4 @@
+import CompCard from "./CompCard";
 import Layout from "./Layout";
 
-export { Layout };
+export { CompCard, Layout };

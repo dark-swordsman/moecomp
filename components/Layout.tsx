@@ -12,8 +12,8 @@ export default function Layout({ children }) {
   }
 
   return (
-    <div>
-      <div>
+    <div className="bg-primary-800 min-h-[100vh] text-gray-100">
+      <div className="w-full">
         <nav className="bg-primary-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between h-16">
@@ -35,7 +35,7 @@ export default function Layout({ children }) {
           </div>
         </nav>
       </div>
-      {children}
+      <div>{children}</div>
     </div>
   );
 }
