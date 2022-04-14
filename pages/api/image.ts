@@ -3,17 +3,29 @@ import { ImageInterface } from "../../intefaces";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "POST") {
-    if (req.body.filename) {
-      const imageData = await ImageInterface.createImage({
-        filename: `${req.body.filename}`,
-      });
+    /*
+      pull multi-part form data
+      send image file to database also in multi-part
+      on response, create DB entry with:
+        - file server image name
+        - (soon) comp ID 
+    */
 
-      res.json({ data: imageData });
-    } else {
-      res
-        .status(400)
-        .json({ error: true, message: "body is empty, please provide a value for 'filename'" });
-    }
+    console.log(req.body);
+
+    res.send("hi");
+
+    // if (req.body.filename) {
+    //   const imageData = await ImageInterface.createImage({
+    //     filename: `${req.body.filename}`,
+    //   });
+
+    //   res.json({ data: imageData });
+    // } else {
+    //   res
+    //     .status(400)
+    //     .json({ error: true, message: "body is empty, please provide a value for 'filename'" });
+    // }
     return;
   }
 
