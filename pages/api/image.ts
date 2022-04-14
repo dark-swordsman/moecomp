@@ -9,6 +9,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       on response, create DB entry with:
         - file server image name
         - (soon) comp ID 
+        - (soon) row ID
+        - row index
+        - title
     */
 
     console.log(req.body);
